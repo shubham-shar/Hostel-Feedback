@@ -6,7 +6,7 @@
       </div>
     </div>
     <br>
-    <form action="#" method="post">
+    <form action="{{url_for('StaffFeedback')}}" method="POST">
       <article class="row">
         <section class="col-12">
           <div class="card border-primary">
@@ -18,13 +18,8 @@
                     Caretaker
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Caretaker">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Caretaker" name="Caretaker">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -33,13 +28,8 @@
                     Wardens
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Wardens">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Wardens" name="Wardens">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -48,13 +38,8 @@
                     Principal
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Principal">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Principal" name="Principal">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -75,13 +60,8 @@
                     Behaviour
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Behaviour">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Behaviour" name="Behaviour">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -90,13 +70,9 @@
                     Redressal of problems
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Problems">
+                    <select class="form-control" id="Problems" name="Problems">
                       <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                      <{% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -105,13 +81,8 @@
                     Overall Rating
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Rating">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Rating" name="Rating">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>

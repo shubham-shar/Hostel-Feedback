@@ -6,7 +6,7 @@
       </div>
     </div>
     <br>
-    <form action="#" method="post">
+    <form action="{{url_for('Others')}}" method="POST">
       <article class="row">
         <section class="col-8">
           <div class="card border-primary">
@@ -18,13 +18,8 @@
                     Availability
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="medical-availability">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="medical-availability" name="Availability">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -33,13 +28,8 @@
                     Medical Emergency Services
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Medical-services">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Medical-services" name="Services">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -49,6 +39,6 @@
         </section>
       </article>
       <br>
-      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+      <input type="submit" class="btn btn-primary mb-5" value="Submit">
     </form>
   {% endblock %}

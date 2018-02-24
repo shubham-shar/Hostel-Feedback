@@ -6,7 +6,7 @@
     </div>
   </div>
   <br>
-  <form action="#" method="post">
+  <form action="{{url_for('MessFeedback')}}" method="POST">
     <article class="row">
       <section class="col-12">
         <div class="card border-primary">
@@ -18,13 +18,8 @@
                   Morning
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="morning">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="morning" name="Morning">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>
@@ -33,13 +28,8 @@
                   Afternoon
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="Afternoon">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="Afternoon" name="Afternoon">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>
@@ -48,13 +38,8 @@
                   Evening
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="Evening">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="Evening" name="Evening">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>
@@ -63,13 +48,8 @@
                   dinner
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="Dinner">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="Dinner" name="Dinner">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>
@@ -90,13 +70,8 @@
                   Food Availablity
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="Food-Availability">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="Food-Availability" name="Availability">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>
@@ -105,13 +80,8 @@
                   Food Quality
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="Food-Quality">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="Food-Quality" name = "Quality">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>
@@ -120,13 +90,8 @@
                   Behaviour
                 </div>
                 <div class="card-body">
-                  <select class="form-control" id="Behaviour">
-                    <option>None</option>
-                    <option>Execellent</option>
-                    <option>Very Good</option>
-                    <option>Good</option>
-                    <option>Average</option>
-                    <option>Poor</option>
+                  <select class="form-control" id="Behaviour" name="Behaviour">
+                    {% include 'options.html' %}
                   </select>
                 </div>
               </div>

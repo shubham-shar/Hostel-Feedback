@@ -6,7 +6,7 @@
       </div>
     </div>
     <br>
-    <form action="#" method="post">
+    <form action="{{url_for('WaterFeedback')}}" method="post">
       <article class="row">
         <section class="col-12">
           <div class="card border-primary">
@@ -18,13 +18,8 @@
                     Drinking Water
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Drinking-water">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Drinking-water" name="Water">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -33,13 +28,8 @@
                     Canteen Food Quality
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Food-Quality">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Food-Quality" name="Quality">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -48,13 +38,8 @@
                     Canteen Food Quantity
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Food-Quantity">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Food-Quantity" name="Quantity">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -63,13 +48,8 @@
                     Variety of products
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Variety">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Variety" name="Variety">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -78,13 +58,8 @@
                     Cost of Products
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Cost">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Cost" name="Cost">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -94,6 +69,6 @@
         </section>
       </article>
       <br>
-      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+      <input type="submit" class="btn btn-primary mb-5" value="Submit">
     </form>
   {% endblock %}

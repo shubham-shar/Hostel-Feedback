@@ -6,7 +6,7 @@
       </div>
     </div>
     <br>
-    <form action="#" method="post">
+    <form action="{{url_for('Facilities')}}" method="POST">
       <article class="row">
         <section class="col-12">
           <div class="card border-primary">
@@ -18,13 +18,8 @@
                     Room
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Room">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Room" name="Room">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -33,13 +28,8 @@
                     Corridors
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Corridors">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Corridors" name="Corridors">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -48,13 +38,8 @@
                     Toilets
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Toilets">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Toilets" name="Toilets">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -63,13 +48,8 @@
                     Common Room
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Common-Room">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Common-Room" name="Croom">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -78,13 +58,8 @@
                     Hostel Surroundings(eg. Lawn)
                   </div>
                   <div class="card-body">
-                    <select class="form-control" id="Surroundings">
-                      <option>None</option>
-                      <option>Execellent</option>
-                      <option>Very Good</option>
-                      <option>Good</option>
-                      <option>Average</option>
-                      <option>Poor</option>
+                    <select class="form-control" id="Surroundings" name="Lawns">
+                      {% include 'options.html' %}
                     </select>
                   </div>
                 </div>
@@ -94,6 +69,6 @@
         </section>
       </article>
       <br>
-      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+      <input type="submit" class="btn btn-primary mb-5" value="Submit">
     </form>
   {% endblock %}
