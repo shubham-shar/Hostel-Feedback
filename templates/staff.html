@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+  {% block content %}
+    <div class="row">
+      <div class="col-12">
+        <span class="h2 font-weight-normal">Staff</span>
+      </div>
+    </div>
+    <br>
+    <form action="#" method="post">
+      <article class="row">
+        <section class="col-12">
+          <div class="card border-primary">
+            <h5 class="card-header bg-primary text-white">Accessability</h5>
+            <div class="card-body">
+              <div class="card-deck">
+                <div class="card border-success">
+                  <div class="card-header">
+                    Caretaker
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Caretaker">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Wardens
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Wardens">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Principal
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Principal">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <br>
+      <article class="row">
+        <section class="col-12">
+          <div class="card border-primary">
+            <h5 class="card-header bg-primary text-white">Service in Hostel</h5>
+            <div class="card-body">
+              <div class="card-deck">
+                <div class="card border-success">
+                  <div class="card-header">
+                    Behaviour
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Behaviour">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Redressal of problems
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Problems">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Overall Rating
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Rating">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <br>
+      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    </form>
+  {% endblock %}

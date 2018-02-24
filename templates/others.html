@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+  {% block content %}
+    <div class="row">
+      <div class="col-12">
+        <span class="h2 font-weight-normal">Other Services</span>
+      </div>
+    </div>
+    <br>
+    <form action="#" method="post">
+      <article class="row">
+        <section class="col-8">
+          <div class="card border-primary">
+            <h5 class="card-header bg-primary text-white">Medical Services</h5>
+            <div class="card-body">
+              <div class="card-deck">
+                <div class="card border-success">
+                  <div class="card-header">
+                    Availability
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="medical-availability">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Medical Emergency Services
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Medical-services">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <br>
+      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    </form>
+  {% endblock %}

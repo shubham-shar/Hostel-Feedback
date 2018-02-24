@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+  {% block content %}
+    <div class="row">
+      <div class="col-12">
+        <span class="h2 font-weight-normal">Water and Food</span>
+      </div>
+    </div>
+    <br>
+    <form action="#" method="post">
+      <article class="row">
+        <section class="col-12">
+          <div class="card border-primary">
+            <h5 class="card-header bg-primary text-white">Rating</h5>
+            <div class="card-body">
+              <div class="card-columns">
+                <div class="card border-success">
+                  <div class="card-header">
+                    Drinking Water
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Drinking-water">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Canteen Food Quality
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Food-Quality">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Canteen Food Quantity
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Food-Quantity">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Variety of products
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Variety">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Cost of Products
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Cost">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <br>
+      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    </form>
+  {% endblock %}

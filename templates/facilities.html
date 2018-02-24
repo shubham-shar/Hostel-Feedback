@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+  {% block content %}
+    <div class="row">
+      <div class="col-12">
+        <span class="h2 font-weight-normal">Hostel Facilities</span>
+      </div>
+    </div>
+    <br>
+    <form action="#" method="post">
+      <article class="row">
+        <section class="col-12">
+          <div class="card border-primary">
+            <h5 class="card-header bg-primary text-white">Rating</h5>
+            <div class="card-body">
+              <div class="card-columns">
+                <div class="card border-success">
+                  <div class="card-header">
+                    Room
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Room">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Corridors
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Corridors">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Toilets
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Toilets">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Common Room
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Common-Room">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-header">
+                    Hostel Surroundings(eg. Lawn)
+                  </div>
+                  <div class="card-body">
+                    <select class="form-control" id="Surroundings">
+                      <option>None</option>
+                      <option>Execellent</option>
+                      <option>Very Good</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <br>
+      <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    </form>
+  {% endblock %}

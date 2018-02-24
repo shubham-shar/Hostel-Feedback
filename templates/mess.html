@@ -1,0 +1,141 @@
+{% extends 'base.html'%}
+  {% block content %}
+  <div class="row">
+    <div class="col-12">
+      <span class="h2 font-weight-normal">Mess</span>
+    </div>
+  </div>
+  <br>
+  <form action="#" method="post">
+    <article class="row">
+      <section class="col-12">
+        <div class="card border-primary">
+          <h5 class="card-header bg-primary text-white">Timings</h5>
+          <div class="card-body">
+            <div class="card-deck">
+              <div class="card border-success">
+                <div class="card-header">
+                  Morning
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="morning">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card border-success">
+                <div class="card-header">
+                  Afternoon
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="Afternoon">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card border-success">
+                <div class="card-header">
+                  Evening
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="Evening">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card border-success">
+                <div class="card-header">
+                  dinner
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="Dinner">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <br>
+    <article class="row">
+      <section class="col-12">
+        <div class="card border-primary">
+          <h5 class="card-header bg-primary text-white">Service By Staff</h5>
+          <div class="card-body">
+            <div class="card-deck">
+              <div class="card border-success">
+                <div class="card-header">
+                  Food Availablity
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="Food-Availability">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card border-success">
+                <div class="card-header">
+                  Food Quality
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="Food-Quality">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card border-success">
+                <div class="card-header">
+                  Behaviour
+                </div>
+                <div class="card-body">
+                  <select class="form-control" id="Behaviour">
+                    <option>None</option>
+                    <option>Execellent</option>
+                    <option>Very Good</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <br>
+    <button type="submit" class="btn btn-primary mb-5">Submit</button>
+  </form>
+  {% endblock %}
