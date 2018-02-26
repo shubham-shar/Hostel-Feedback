@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hostel Feedback</title>
+    {% include 'header.html' %}
+    <meta name="google-signin-client_id" content="1021404337062-5v77d46tu485bqseuvr99mtr621elbs7.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row m-5">
+        <div class="col-4">
+          <span class="g-signin2"
+          data-onsuccess="onSignIn"
+          data-redirecturi="postmessage"
+          data-accesstype="offline"
+          data-scope="openid email profile"
+          data-cookiepolicy="single_host_origin">
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function onSignIn(googleUser){
+        if(googleUser){
+          $('.g-signin2').attr('style', 'display: none');
+          $.ajax({
+            type: 'POST',
+            url: '/gsignin?state={{STATE}}',
+            processData: false,
+            data: googleUser['code'],
+            contentType: 'application/octet-stream; charset=utf-8',
+            success: function(result) {
+              // Handle or verify the server response if necessary.
+              if (result) {
+               setTimeout(function() {
+                window.location.href = "/feedback";
+              }, 1000);
+              } else if (authResult['error']) {
+              console.log('There was an error: ' + authResult['error']);
+              }
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -13,52 +13,52 @@ class Students(Base):
     id = Column(Integer, primary_key = True)
     name = Column(String(50), nullable = False)
     email = Column(String(50), nullable = False)
-    password = Column(String(100), nullable = False)
+    picture = Column(String(100), nullable = False)
 
 class staff(Base):
     __tablename__ = 'staff'
     id  = Column(Integer, primary_key = True)
-    Caretaker = Column(String(20), nullable = False)
-    Wardens = Column(String(20), nullable = False)
-    Principal= Column(String(20), nullable = False)
-    Behaviour = Column(String(20), nullable = False)
-    Problems = Column(String(20), nullable = False)
-    Rating = Column(String(20), nullable = False)
+    Caretaker = Column(Integer, nullable = False)
+    Wardens = Column(Integer, nullable = False)
+    Principal= Column(Integer, nullable = False)
+    Behaviour = Column(Integer, nullable = False)
+    Problems = Column(Integer, nullable = False)
+    Rating = Column(Integer, nullable = False)
 
 class Water(Base):
     __tablename__ = 'room'
     id = Column(Integer, primary_key = True)
-    Water = Column(String(20), nullable = False)
-    Quality= Column(String(20), nullable = False)
-    Quantity = Column(String(20), nullable = False)
-    Variety = Column(String(20), nullable = False)
-    Cost = Column(String(20), nullable = False)
+    Water = Column(Integer, nullable = False)
+    Quality= Column(Integer, nullable = False)
+    Quantity = Column(Integer, nullable = False)
+    Variety = Column(Integer, nullable = False)
+    Cost = Column(Integer, nullable = False)
 
 class Mess(Base):
     __tablename__ = 'mess'
     id = Column(Integer, primary_key = True)
-    Morning = Column(String(20), nullable = False)
-    Afternoon = Column(String(20), nullable = False)
-    Evening = Column(String(20), nullable = False)
-    Dinner = Column(String(20), nullable = False)
-    Availablity = Column(String(20), nullable = False)
-    Quality = Column(String(20), nullable = False)
-    Behaviour = Column(String(20), nullable = False)
+    Morning = Column(Integer, nullable = False)
+    Afternoon = Column(Integer, nullable = False)
+    Evening = Column(Integer, nullable = False)
+    Dinner = Column(Integer, nullable = False)
+    Availablity = Column(Integer, nullable = False)
+    Quality = Column(Integer, nullable = False)
+    Behaviour = Column(Integer, nullable = False)
 
 class FacilitiesFeedback(Base):
     __tablename__ = 'facilities'
     id = Column(Integer, primary_key = True)
-    Room = Column(String(20), nullable = False)
-    Corridors = Column(String(20), nullable = False)
-    Toilets = Column(String(20), nullable = False)
-    Croom = Column(String(20), nullable = False)
-    Lawns = Column(String(20), nullable = False)
+    Room = Column(Integer, nullable = False)
+    Corridors = Column(Integer, nullable = False)
+    Toilets = Column(Integer, nullable = False)
+    Croom = Column(Integer, nullable = False)
+    Lawns = Column(Integer, nullable = False)
 
 class OtherFeedback(Base):
     __tablename__ = 'others'
     id = Column(Integer, primary_key = True)
-    Availability = Column(String(20), nullable = False)
-    Services = Column(String(20), nullable = False)
+    Availability = Column(Integer, nullable = False)
+    Services = Column(Integer, nullable = False)
 
 engine = create_engine('sqlite:///feedback.db')
 Base.metadata.create_all(engine)
