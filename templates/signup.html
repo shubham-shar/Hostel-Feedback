@@ -1,0 +1,46 @@
+{% extends 'formbase.html' %}
+  {% block content %}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-primary">
+        <div class="card-header bg-muted h1 font-weight-light">
+          Signup Form
+        </div>
+        <div class="card-body">
+          <form action="{{url_for('Signup')}}" method="POST">
+            <div class="form-group">
+              {% if error %}
+                <label class="text-danger">{{error}}</label><br>
+              {% endif %}
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="Name" id="Name" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email ID</label>
+              <input type="text" class="form-control" name="Email" id="email" placeholder="Enter your Email ID" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="Password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <label for="repass">Re-type Password</label>
+              <input type="password" class="form-control" name="Repass" id="repass" placeholder="Re-type your Password" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Signup</button>
+            </div>
+            <div class="form-group">
+              <span>Already a member?</span><br>
+              <a href="{{url_for('Login')}}">
+                <button type="button" class="btn btn-primary">Login Here!</button>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <br><br><br>
+    </div>
+  </div>
+  {% endblock %}

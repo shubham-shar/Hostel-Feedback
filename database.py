@@ -5,6 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
+from passlib.apps import custom_app_context as phash
 
 Base = declarative_base()
 
@@ -12,8 +13,14 @@ class Students(Base):
     __tablename__ = 'Student'
     id = Column(Integer, primary_key = True)
     name = Column(String(50), nullable = False)
-    email = Column(String(50), nullable = False)
-    password = Column(String(100), nullable = False)
+    email = Column(String(50), nullable = False, index=True)
+    password_hash = Column(String(100))
+
+    def hash_password(self, password):
+        self.password_hash = phash.encrypt(password)
+
+    def verify_password(self, password):
+        return phash.verify(password, self.password_hash)
 
 class staff(Base):
     __tablename__ = 'staff'

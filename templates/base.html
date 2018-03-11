@@ -8,8 +8,23 @@
   <body>
     <div class="container">
       <header class="row text-center mb-5">
-        <div class="col-12 h1 font-weight-normal">
+        <div class="col-10 display-4">
           Hostel Feedback
+        </div>
+        <div class="col-md-2 text-right pt-3">
+          {%if 'logged_in' not in session %}
+          <a href="{{url_for('Login')}}">
+            <button class="btn bg-faded text-black" type="button" name="button">
+              Click Here to Login
+            </button>
+          </a>
+			    {% else %}
+          <a href="{{url_for('Logout')}}">
+            <button class="btn bg-faded text-black" type="button" name="button">
+              Logout
+            </button>
+          </a>
+			    {% endif %}
         </div>
       </header>
       {% block content %}
