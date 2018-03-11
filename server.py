@@ -19,6 +19,8 @@ def Feedback():
 
 @app.route('/signup', methods = ['GET', 'POST'])
 def Signup():
+    if 'logged_in' in term:
+        return redirect(url_for('Feedback'))
     error = None
     if request.method == 'POST':
         password = request.form['Password']
@@ -34,7 +36,7 @@ def Signup():
             student.hash_password(password)
             session.add(student)
             session.commit()
-            user = session.query(Students).filter_by(email = email).one()
+            user = session.query(Students).filter_by(email = email).first()
             term['logged_in'] = True
             term['user_id'] = user.id
             term['email'] = email
@@ -48,6 +50,8 @@ def Signup():
 @app.route('/login', methods=['GET', 'POST'])
 def Login():
     error = None
+    if 'logged_in' in term:
+        return redirect(url_for('Feedback'))
     if request.method == 'POST':
         student = session.query(Students).filter_by(email = request.form['Email']).first()
         if not student:
@@ -73,6 +77,8 @@ def Logout():
 
 @app.route('/feedback/staff', methods = ['GET', 'POST'])
 def StaffFeedback():
+    if 'logged_in' not in term:
+        return redirect(url_for('Login'))
     if request.method == 'POST':
         newFeedback = staff(Caretaker = request.form['Caretaker'],
                             Wardens = request.form['Wardens'],
@@ -88,6 +94,8 @@ def StaffFeedback():
 
 @app.route('/feedback/water', methods=['GET', 'POST'])
 def WaterFeedback():
+    if 'logged_in' not in term:
+        return redirect(url_for('Login'))
     if request.method == 'POST':
         newFeedback = Water(Water = request.form['Water'],
                             Quality = request.form['Quality'],
@@ -102,6 +110,8 @@ def WaterFeedback():
 
 @app.route('/feedback/mess', methods=['GET', 'POST'])
 def MessFeedback():
+    if 'logged_in' not in term:
+        return redirect(url_for('Login'))
     if request.method == 'POST':
         newFeedback = Mess(Morning = request.form['Morning'],
                            Afternoon = request.form['Afternoon'],
@@ -118,6 +128,8 @@ def MessFeedback():
 
 @app.route('/feedback/facilities', methods = ['GET','POST'])
 def Facilities():
+    if 'logged_in' not in term:
+        return redirect(url_for('Login'))
     if request.method == 'POST':
         newFeedback = FacilitiesFeedback(Room = request.form['Room'],
                                         Corridors = request.form['Corridors'],
@@ -132,6 +144,8 @@ def Facilities():
 
 @app.route('/feedback/others', methods = ['GET', 'POST'])
 def Others():
+    if 'logged_in' not in term:
+        return redirect(url_for('Login'))
     if request.method == 'POST':
         newFeedback = OtherFeedback(Availability = request.form['Availability'],
                                     Services = request.form['Services'])
