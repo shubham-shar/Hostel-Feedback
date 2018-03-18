@@ -12,6 +12,14 @@
               {% if error %}
                 <label class="text-danger">{{error}}</label><br>
               {% endif %}
+            </div>
+            <div class="form-group col-md-4">
+              <select class="form-control" id="User-type" name="user-type">
+                <option value="Student">Student</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="email">Email ID</label>
               <input type="text" class="form-control" name="Email" id="email" placeholder="Enter your Email ID" required>
             </div>

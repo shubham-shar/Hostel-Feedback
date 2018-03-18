@@ -1,0 +1,47 @@
+{% extends 'admin/base.html' %}
+  {% block content %}
+  <article class="row">
+    <div class="card-columns">
+      <div class="card border-danger">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Mess</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Feedback</h6>
+          <p class="card-text">Check out the feedback of Mess</p>
+          <a href="{{url_for('AdminMess')}}" class="card-link text-success">Click here!</a>
+        </div>
+      </div>
+      <div class="card border-danger">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Water and Food</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Feedback</h6>
+          <p class="card-text">Check out the feedback of Water facility.</p>
+          <a href="{{url_for('AdminWater')}}" class="card-link text-success">Click here!</a>
+        </div>
+      </div>
+      <div class="card border-danger">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Staff</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Feedback</h6>
+          <p class="card-text">Check out the feedback of Staff facility.</p>
+          <a href="{{url_for('AdminStaff')}}" class="card-link text-success">Click here!</a>
+        </div>
+      </div>
+      <div class="card border-danger">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Facilities</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Feedback</h6>
+          <p class="card-text">Check out the feedback  of facilities given.</p>
+          <a href="{{url_for('AdminFacilites')}}" class="card-link text-success">Click here!</a>
+        </div>
+      </div>
+      <div class="card border-danger">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Others</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Feedback</h6>
+          <p class="card-text">Check out the feedback of other facilities.</p>
+          <a href="{{url_for('AdminOthers')}}" class="card-link text-success">Click here!</a>
+        </div>
+      </div>
+    </div>
+  </article>
+  {% endblock %}

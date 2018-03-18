@@ -12,8 +12,22 @@
           Hostel Feedback
         </div>
       </header>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="row">
+          <div class="col-md-6 border-info p-2">
+            {% for message in messages %}
+            <span class="text-info">{{message}}</span>
+            {% endfor %}
+          </div>
+        </div>
+
+        {% endif %}
+      {% endwith %}
+      <br>
       {% block content %}
       {% endblock %}
     </div>
+    <br><br>
   </body>
 </html>

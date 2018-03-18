@@ -1,0 +1,244 @@
+{% extends 'admin/base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <span class="h3 font-weight-light"> Staff Feedback</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-columns">
+        <div class="card">
+          <h5 class="card-header bg-secondary text-white">Caretaker Accessability</h5>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Excellent
+                <span class="badge badge-primary badge-pill">
+                  {{ Caretaker|selectattr('Caretaker', 'equalto', 5)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Very Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Caretaker|selectattr('Caretaker', 'equalto', 4)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Caretaker|selectattr('Caretaker', 'equalto', 3)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Average
+                <span class="badge badge-primary badge-pill">
+                  {{ Caretaker|selectattr('Caretaker', 'equalto', 2)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Poor
+                <span class="badge badge-primary badge-pill">
+                  {{ Caretaker|selectattr('Caretaker', 'equalto', 1)|list|length }}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="card-header bg-secondary text-white">Warden Accessability</h5>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Excellent
+                <span class="badge badge-primary badge-pill">
+                  {{ Wardens|selectattr('Wardens', 'equalto', 5)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Very Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Wardens|selectattr('Wardens', 'equalto', 4)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Wardens|selectattr('Wardens', 'equalto', 3)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Average
+                <span class="badge badge-primary badge-pill">
+                  {{ Wardens|selectattr('Wardens', 'equalto', 2)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Poor
+                <span class="badge badge-primary badge-pill">
+                  {{ Wardens|selectattr('Wardens', 'equalto', 1)|list|length }}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="card-header bg-secondary text-white">Principal Accessability</h5>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Excellent
+                <span class="badge badge-primary badge-pill">
+                  {{ Principal|selectattr('Principal', 'equalto', 5)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Very Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Principal|selectattr('Principal', 'equalto', 4)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Principal|selectattr('Principal', 'equalto', 3)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Average
+                <span class="badge badge-primary badge-pill">
+                  {{ Principal|selectattr('Principal', 'equalto', 2)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Poor
+                <span class="badge badge-primary badge-pill">
+                  {{ Principal|selectattr('Principal', 'equalto', 1)|list|length }}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="card-header bg-secondary text-white">Behaviour of Staff</h5>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Excellent
+                <span class="badge badge-primary badge-pill">
+                  {{ Behaviour|selectattr('Behaviour', 'equalto', 5)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Very Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Behaviour|selectattr('Behaviour', 'equalto', 4)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Behaviour|selectattr('Behaviour', 'equalto', 3)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Average
+                <span class="badge badge-primary badge-pill">
+                  {{ Behaviour|selectattr('Behaviour', 'equalto', 2)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Poor
+                <span class="badge badge-primary badge-pill">
+                  {{ Behaviour|selectattr('Behaviour', 'equalto', 1)|list|length }}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="card-header bg-secondary text-white">Redressal of Problems</h5>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Excellent
+                <span class="badge badge-primary badge-pill">
+                  {{ Problems|selectattr('Problems', 'equalto', 5)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Very Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Problems|selectattr('Problems', 'equalto', 4)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Problems|selectattr('Problems', 'equalto', 3)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Average
+                <span class="badge badge-primary badge-pill">
+                  {{ Problems|selectattr('Problems', 'equalto', 2)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Poor
+                <span class="badge badge-primary badge-pill">
+                  {{ Problems|selectattr('Problems', 'equalto', 1)|list|length }}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="card-header bg-secondary text-white">Overall Rating</h5>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Excellent
+                <span class="badge badge-primary badge-pill">
+                  {{ Rating|selectattr('Rating', 'equalto', 5)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Very Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Rating|selectattr('Rating', 'equalto', 4)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Good
+                <span class="badge badge-primary badge-pill">
+                  {{ Rating|selectattr('Rating', 'equalto', 3)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Average
+                <span class="badge badge-primary badge-pill">
+                  {{ Rating|selectattr('Rating', 'equalto', 2)|list|length }}
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Poor
+                <span class="badge badge-primary badge-pill">
+                  {{ Rating|selectattr('Rating', 'equalto', 1)|list|length }}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
+{% endblock %}
